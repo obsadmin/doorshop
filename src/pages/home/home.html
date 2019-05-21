@@ -1,0 +1,196 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title small>{{title}}</ion-title>
+  </ion-navbar>
+
+  <ion-toolbar color="primary">
+    <ion-searchbar [(ngModel)]="myInput" [showCancelButton]="shouldShowCancel" (ionInput)="onInput($event)" (ionCancel)="onCancel($event)"
+      placeholder="Search for shop, product item">
+    </ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid no-padding no-margin>
+    <ion-row class="tab-font-size">
+      <ion-col col-4 no-margin no-padding>
+        <button ion-button large full color="white" (click)="openHomePage()">
+         <div>
+           <ion-icon color="primary" name="home"></ion-icon><br>
+         <label> Nearby Shop </label> 
+         </div>
+         </button>
+      </ion-col>
+      <ion-col col-4 no-margin no-padding>
+        <button ion-button full large color="white">
+          <div>
+           <ion-icon color="primary" name="list-box"></ion-icon><br>
+         <label> Orders </label> 
+         </div>
+       </button>
+      </ion-col>
+      <ion-col col-4 no-margin no-padding>
+        <button ion-button large full color="white">
+          <div>
+           <ion-icon color="primary" name="pricetag"></ion-icon><br>
+         <label> Offers </label> 
+         </div>
+       </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+
+ <div class="button-row" style="background:#fff">
+   <div class="fav-shop-title"><label>Favourite Shops</label></div>
+   <div class="row">
+    <!-- <div col-3 class="pad">
+        <div class="thumbnail-img">
+
+
+           <ion-thumbnail>
+            <img mat-card-image src="assets/imgs/logo.png">
+           </ion-thumbnail>
+            <div class="thumbnail-text">
+                <label>Vidhrab Store</label>
+            </div>
+        </div>
+     </div>-->
+
+
+      <div col-4>
+        <div class="thumbnail-img">
+           <ion-thumbnail class="pad-2">
+             <img mat-card-image src="assets/imgs/shop-building-png.png">
+           </ion-thumbnail>
+            <div class="thumbnail-text">
+                <label>Vidhrab Store,Pune</label>
+            </div>
+        </div>
+     </div>
+
+
+      <div col-4>
+        <div class="thumbnail-img">
+           <ion-thumbnail class="pad-2">
+             <img mat-card-image src="assets/imgs/logo.png">
+           </ion-thumbnail>
+            <div class="thumbnail-text">
+                <label>Vidhrab Store</label>
+            </div>
+        </div>
+     </div>
+
+
+     <div col-4>
+        <div class="thumbnail-img">
+           <ion-thumbnail class="pad-2">
+             <img mat-card-image src="assets/imgs/shop-building-png.png">
+           </ion-thumbnail>
+            <div class="thumbnail-text">
+                <label>Vidhrab Store</label>
+            </div>
+        </div>
+     </div>
+
+     
+   </div>
+    
+</div>
+
+ <!-- <div class="button-row" style="background:#fff">
+
+
+    <mat-grid-list color="white" cols="3" rowHeight="100px" style="margin-top:5px">
+
+      <mat-grid-tile>
+        <label class="fav-text" padding>Favourite Shop</label>
+      </mat-grid-tile>
+
+
+
+      <mat-grid-tile>
+          <div class="thumbnail-img">
+              <ion-thumbnail padding>
+                <img mat-card-image src="assets/imgs/logo.png">
+              </ion-thumbnail>
+              <div class="thumbnail-text"> 
+                   Nine Inch Store
+             </div>
+         </div>
+
+      </mat-grid-tile>
+      <mat-grid-tile>
+
+         <div class="thumbnail-img">
+              <ion-thumbnail padding>
+                <img mat-card-image src="assets/imgs/shop-building-png.png">
+              </ion-thumbnail>
+              <div class="thumbnail-text"> 
+                 
+                 Nine Inch, Delhi
+             </div>
+         </div>
+
+      
+
+
+      </mat-grid-tile>
+
+    </mat-grid-list>
+  </div>
+-->
+
+
+  <ion-card *ngFor="let banner of banners">
+    <img src="https://ionicframework.com/dist/preview-app/www/assets/img/nin-live.png" />
+    <ion-card-content>
+      <label>
+        Nine Inch Store
+      </label>
+     <p>
+       Hgsgdhsa ashjdghjsa
+     </p>
+    </ion-card-content>
+  </ion-card>
+
+
+  <div class="button-row" style="background:#fff">
+    <mat-grid-list color="white" cols="1" rowHeight="80px" style="margin-top:10px">
+      <mat-grid-tile>
+
+        <img mat-card-image src="assets/imgs/shop-building-png.png">
+
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+
+
+
+
+
+  <div class="button-row" style="background:#fff">
+    <mat-grid-list color="white" cols="3" rowHeight="80px" style="margin-top:10px">
+      <mat-grid-tile>
+        <ion-thumbnail padding>
+          <img mat-card-image src="assets/imgs/logo.png">
+        </ion-thumbnail>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <ion-thumbnail padding>
+          <img mat-card-image src="assets/imgs/logo.png">
+        </ion-thumbnail>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <ion-thumbnail padding>
+          <img mat-card-image src="assets/imgs/shop-building-png.png">
+        </ion-thumbnail>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+</ion-content>

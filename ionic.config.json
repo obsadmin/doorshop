@@ -1,0 +1,7 @@
+{
+  "name": "dayshop",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
